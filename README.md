@@ -2,8 +2,9 @@
 基于原生js的移动端滚屏H5; 可用于活动H5页面; 也可用于轮播图
 
 ### 引入方式
-```
-<link rel="stylesheet" type="text/css" href="./css/touchSlide.css"><script src="./js/touchSlider.js">
+```javascript
+<link rel="stylesheet" type="text/css" href="./css/touchSlide.css">
+<script src="./js/touchSlider.js">
 ```
 
 ### 使用方法
