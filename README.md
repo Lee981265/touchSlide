@@ -9,7 +9,7 @@
 
 ### 使用方法
 
-```
+``` javascript
 var touch = new TouchSlide({
 	warp: '.touchwarp',
 	box: '.box',
@@ -18,7 +18,7 @@ var touch = new TouchSlide({
 ```
 
 ### 模板结构
-```
+``` html
 <div class="touchSlide">
 	<div class="touchwarp clearfix">
 		<div class="slidebox">1</div>
