@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>移动端-手指滑屏</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="移动端H5, 移动端touchstart, 移动端touchsmove, 移动端touchend, 移动端滚屏, 移动端滑屏, 原生js手指滑屏">
+	<meta name="keywords" content="移动端, H5, 移动端touchstart, 移动端touchsmove, 移动端touchend, 移动端滑屏, 原生js手指滑屏">
+	<link rel="stylesheet" href="./lib/css/base.css">
+</head>
+<style>
+	html,body{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden; 
+	}
+	.slider1{
+		background: #de7373;
+	}
+	.slider2{
+		background: #73ddde;
+	}
+	.slider3{
+		background: #4fb6f5;
+	}
+	.slider4{
+		background: #5fec8c;
+	}
+	.slider5{
+		background: #e45fec;
+	}
+	.slider6{
+		background: #de7373;
+	}
+</style>
+<body id="app">
+	<!-- 模板 start -->
+	<link rel="stylesheet" href="./css/touchSlide.css">
+	<div class="touchSlide">
+		<div class="touchwarp clearfix">
+			<div class="slidebox box slider1">1</div>
+			<div class="slidebox box slider2">2</div>
+			<div class="slidebox box slider3">3</div>
+			<div class="slidebox box slider4">4</div>
+			<div class="slidebox box slider5">5</div>
+		</div>
+	</div>
+	<!-- 模板 end -->
+
+	<script src='./js/touchSlider.js'></script>
+<script>
+
+	var slide = new Touchslide({
+		warp: '.touchwarp', 	//滚动容器
+		box: '.box',	//列表
+		animate: 500,	  //动画时间，滚动的时间，单位毫秒
+		// arrow: 0,  	 // 滚动方向 1为上下，0为左右，默认为1
+		carousel: true,  //是否启动自动轮播模式，默认false, 必须和timing同时设定
+		timing: 3000,   //轮播时间
+		// showMeau: false   // 默认为true, 是否显示索引
+	});
+	slide.init();
+	console.log(slide);
+
+</script>
+</body>
+</html>

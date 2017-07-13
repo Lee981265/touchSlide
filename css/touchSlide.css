@@ -1,0 +1,54 @@
+.touchSlide {
+  position: relative;
+  height: 100%; }
+  .touchSlide .touch-menu {
+    position: absolute;
+    text-align: center; }
+    .touchSlide .touch-menu.touch-line {
+      width: 15px;
+      /*height: 100%;*/
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%); }
+      .touchSlide .touch-menu.touch-line li {
+        margin-bottom: 5px; }
+    .touchSlide .touch-menu.touch-arrow {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%); }
+      .touchSlide .touch-menu.touch-arrow li {
+        margin-right: 5px; }
+    .touchSlide .touch-menu li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      background: #ddd;
+      opacity: 0.5;
+      transition: opacity .3s; }
+      .touchSlide .touch-menu li.active {
+        opacity: 1;
+        background: #fff; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  overflow: hidden;
+  height: 0;
+  clear: both; }
+
+.touchwarp {
+  height: 100%; }
+  .touchwarp .slidebox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    float: left; }
+
+/*# sourceMappingURL=touchSlide.css.map */
