@@ -2,22 +2,22 @@
 基于原生js的移动端滚屏H5; 可用于活动H5页面; 也可用于轮播图
 
 ### 引入方式
-`
+```
 <link rel="stylesheet" type="text/css" href="./css/touchSlide.css"><script src="./js/touchSlider.js">
-`
+```
 
 ### 使用方法
 
-`
+```
 var touch = new TouchSlide({
 	warp: '.touchwarp',
 	box: '.box',
 	showMeau: false
 })
-`
+```
 
 ### 模板结构
-`
+```
 <div class="touchSlide">
 	<div class="touchwarp clearfix">
 		<div class="slidebox">1</div>
@@ -27,7 +27,7 @@ var touch = new TouchSlide({
 		<div class="slidebox">5</div>
 	</div>
 </div>
-`
+```
 
 ### 参数说明
 
