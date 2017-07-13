@@ -366,7 +366,14 @@
 		this.meau[n-1].className = 'active';
 	} 
 
-
-	w.Touchslide = Touchslide;
-
+	if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
+		define(function() {
+			return Touchslide;
+		});
+	} else if (typeof module !== 'undefined' && module.exports) {
+		module.exports.Touchslide = Touchslide;
+	} else {
+		w.Touchslide = Touchslide;
+	}
+	// w.Touchslide = Touchslide;
 })(window)
