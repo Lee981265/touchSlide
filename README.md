@@ -32,7 +32,7 @@ var touch = new TouchSlide({
 ### 参数说明
 
 | params | val | 说明 |
-|---------------------|
+|------|-------|-------|
 | warp | class | 容器的class |
 | box  | class | 列表的class |
 | animate | int | 动画时间，滚动的时间，单位毫秒 |
