@@ -41,6 +41,8 @@ var touch = new TouchSlide({
 | carousel | boolean | 是否启动自动轮播模式，默认为false, 必须和timing同时设定 |
 | timing | int | 轮播间隔时间 |
 | showMeau | boolean | 是否显示索引，默认值为true |
+| slideAfter | function (index) {} | 滚动的回调方法，参数index为当前的索引，事实索引是从0开始，index-1为真实的索引 |
+| go | function(index) {} | 对象的方法，为跳到指定的页面，touch.go(2) |
 
 
 ### MIT

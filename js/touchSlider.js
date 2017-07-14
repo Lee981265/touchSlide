@@ -19,6 +19,7 @@
 		this.timing = obj.timing;  //轮播时间间隔，单位毫秒
 		this.meau = null; 	//菜单列表节点
 		this.version= "1.0.0";
+		this.slideAfter = obj.slideAfter || function (index) {};  //滚动之后的回调函数
 	};
 	/*
 		@ Y 		开始的y轴位置
@@ -169,7 +170,8 @@
 		var self = this;
 		if(this.carousel) {
 			this.startTime();
-		}
+		};
+		this.slideAfter(this._index);
 	}
 
 	// 清除定时器
@@ -220,7 +222,9 @@
 		};
 		setTimeout(function(){
 			flag = true;
-		},this.animate*1000)
+		},this.animate*1000);
+		// 执行回调
+		this.slideAfter(this._index);
 	};
 
 	// 横向滚动
@@ -257,10 +261,13 @@
 		setTimeout(function(){
 			flag = true;
 		},this.animate*1000)
+		// 执行回调
+		this.slideAfter(this._index);
 	};
 	
 	// 手指触摸移动
 	Touchslide.prototype.move = function (e) {
+		// e.preventDefault();
 		if(!this.arrow){  //左右
 			moveX = e.touches[0].pageX;
 			var _X = returnPosition(this._warp, moveX, oldX);
@@ -347,6 +354,21 @@
 			this.startTime();
 		}
 	};
+
+	// 跳转到指定页面
+	Touchslide.prototype.go = function(n) {
+		if(this.arrow) {
+			this.translateYDom(this._warp, n, this._h);
+		}else{
+			this.translateXDom(this._warp, n, this._w);
+		};
+		if(n <=this._len){
+			this._index = n;
+			this.meauClass(n);
+		}
+		this.meauClass(this._index);
+		this.slideAfter(this._index);
+	}
 
 	// 轮播
 	Touchslide.prototype.autoPlay = function () {
